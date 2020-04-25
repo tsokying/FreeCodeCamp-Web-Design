@@ -1,0 +1,177 @@
+:root {
+    --color-white: #f7f7f7;
+    --color-black: rgba(5, 4, 10);
+    --color-black-alpha: rgba(5, 4, 10, 0.6);
+    --color-lightblue: #95cfe8;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.618rem;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-white);
+    width: 100%;
+    margin: 3.125rem auto 0 auto;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-image: url(https://images.unsplash.com/photo-1507643179773-3e975d7ac515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1 {
+    font-size: 4.236rem;
+    line-height: 1;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 0;
+    margin-bottom: 2.618rem;
+}
+
+a {
+    color: #477ca7;
+}
+
+a:visited {
+    color: #74638f;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.618rem;
+    color: var(--color-lightblue);
+    margin: 1rem 0;
+}
+
+label[for="M"],
+label[for="F"],
+label[for="O"] {
+    display: inline;
+}
+
+input,
+button,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button {
+    border: none;
+}
+
+/* container */
+
+body {
+}
+
+@media (min-width: 576px) {
+    body {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 720px;
+    }
+}
+
+/* Class */
+
+.clue {
+    font-size: 1rem;
+    color: var(--color-lightblue);
+    margin-left: 1rem;
+}
+
+#survey-form {
+    background-color: var(--color-black-alpha);
+    margin: 0 auto;
+    width: 76.8%;
+    text-align: left;
+}
+
+@media (min-width: 576px) {
+    #survey-form {
+        max-width: 424px;
+        padding: 2.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    #survey-form {
+        max-width: 565px;
+    }
+}
+
+.form-group {
+    margin: 0 auto 1.236rem auto;
+    padding: 0.236rem;
+}
+
+.form-control {
+    padding: 0.382rem 0.786rem;
+    background-clip: padding-box;
+    border: 1px solid var(--color-black);
+    border-radius: 0.382rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--color-lightblue);
+    outline: 0;
+    box-shadow: 0 0 0 0.236rem var(--color-black);
+}
+
+.input-radio,
+.input-checkbox {
+    display: innline-block;
+    margin-right: 0.618rem;
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+}
+
+.input-textarea {
+    min-height: 120px;
+    width: 78.6%;
+    padding: 0.618rem;
+    resize: vertical;
+}
+
+#submit {
+    color: var(--color-black);
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 2px;
+    cursor: pointer;
+}

@@ -1,0 +1,155 @@
+/* basic */
+
+:root {
+    --color-white: #f7f7f7; /* 97% white */
+    --color-black: rgba(26, 26, 26); /* 90% black */
+    --color-black-alpha: rgba(26, 26, 26, 0.7);
+    --main-color: #21487a;
+    --second-color: #1f6f7a;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.272rem;
+    line-height: 1.5;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    margin: 0;
+}
+
+/* words */
+
+header {
+    color: var(--main-color);
+    font-size: 2.618rem;
+    padding: 1.618rem;
+    font-weight: bold;
+}
+
+#title {
+    font-size: 3.272rem;
+    line-height: 4rem;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    header {
+        font-size: 2rem;
+    }
+    #title {
+        font-size: 2.618rem;
+        line-height: 3rem;
+    }
+}
+
+p {
+    padding: 0 1.618rem;
+}
+
+a {color: #477ca7;}
+
+a:visited {color: #74638f;}
+
+/* navbar & main */
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    width: 285px;
+    background-color: var(--color-white);
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    border-bottom: 0.1rem solid;
+}
+
+.nav-link, .nav-link:visited {
+    
+    display: block;
+    color: var(--color-black);
+    padding: 1.618rem;
+    text-decoration: none;
+    border-right: 0.1rem solid;
+    border-top: 0.1rem solid;
+    
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--main-color);
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+main {
+    height: auto;
+    margin-left: 285px;
+    padding: 0.1rem 2.618rem;
+    margin-bottom: 4.236rem;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        width: 100%;
+        max-height: 275px;
+        position: relative;
+    }
+    .nav-link {
+        float: left;
+        border: 0;
+    }
+    main {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-link {
+        text-align: center;
+        float: none;
+    }
+    
+    .nav-link {
+        border-right: 0;
+        border-top: 0;
+    }
+}
+
+/* main's content */
+
+section {
+}
+
+section li {
+    
+}
+
+.code-block {
+  display: block;
+  line-height: 2;
+  background-color: #f0f0ff;
+  border-radius: 1rem;
+}
+        
+@media only screen and (max-width: 400px) {
+
+  .code-block {
+  }
+}

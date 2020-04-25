@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head class="header">
+    <!-- metadata elements -->
+    <title>Java Documentation</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <header id="title">Java Documentation</header>
+        <a href="#introduction" class="nav-link">Introduction</a>
+        <a href="#Object-oriented_Programming" class="nav-link">Object-Oriented Programming</a>
+        <a href="#inheriatance" class="nav-link">Inheriatance</a>
+        <a href="#polymorphism" class="nav-link">Polymorphism</a>
+        <a href="#stack-heap" class="nav-link">Stack and Heap</a>
+        <a href="#GUI" class="nav-link">GUI</a>
+        <a href="#Exception" class="nav-link">Exception</a>
+        <a href="#io-object-serialisation" class="nav-link">IO and Object serialisation</a>
+        <a href="#reference" class="nav-link">Reference</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section id="introduction" class="main-section">
+            <header>Introduction</header>
+            <p>Java is one of the most popular programming languae in the world. It was created in 1995 and now owned by Oracle. There are more than 3 billion devices run Java. It is now mainly used for Android apps. It also used for desktop applicarions, web apllications, servers, games, database connection and more.</p>
+        </section>
+
+        <section id="Object-oriented_Programming" class="main-section">
+            <header>Object-Oriented Programming (OOP)</header>
+            <p>Jave is a class-based, object-oriented programming language. It gives a clear structure to programs and allows code to be reused, lowering development costs. An object-oriented programming has 4 key prinicples:</p>
+            <ol>
+                <li>Abstraction</li>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+            </ol>
+            <p>But, before going deeper in each of the prinicples, what exactly is an "object"?</p>
+            <p>An object is a combination of variables, functions and data structures. An object is an instance of a class. "A class is a blueprint to create objects. An object is an instance of a class." Here is an example:</p>
+            <pre><code class="code-block">
+            public class Point {
+                public int x = 0;
+                public int y = 0;
+                //constructor
+                public Point(int a, int b) {
+                    x = a;
+                    y = b;
+                }
+            }
+            </code></pre>
+            <p>We first have to have a class (blueprint), which includes the Specifier such as <code>private, protected, public and default.</code> Within the class, there are member variables <code> x</code> and <code>y</code>. They also have their specifier. Finally, we need a constructor. Constructor declarations look like method declarations—except that they use the name of the class and have no return type. In this example, the constructor has two parameters, allowing we initialize the member variables.</p>
+
+            <pre><code class="code-block">
+            Point pt = new Point(0, 0);
+            </code></pre>
+            <ul>
+                <li>
+                    <p>Declaration: <b>Point pt</b> is the declaration, including the name (pt) and the object type (Point).</p>
+                </li>
+                <li>
+                    <p>Instantiation: <b>new</b> is the Java keyword that creates the object.</p>
+                </li>
+                <li>
+                    <p>Initialization: <b>Point(0 ,0)</b> is the constructor that initializes the new object.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="inheriatance" class="main-section">
+            <header>Inheriatance</header>
+            <p>Multiple inheritance is a feature of some object-oriented computer programming languages in which an object or class can inherit characteristics and features from more than one parent object or parent class.</p>
+            <p>In practical, it is very easy to implement: just use the <code>extends</cdoe> keyword. It will inherit ALL, but not accesss ALL. A subclass does not inherit the <code>private</code> members of its parent class.</p>
+            <pre><code class="code-block">
+            class Vehicle {
+                // member declarations
+            }
+            class Car extends Vehicle {
+                // inherit accessible members from Vehicle
+                // provide own member declarations
+            }
+</code></pre>
+        </section>
+
+        <section id="polymorphism" class="main-section">
+            <header>Polymorphism</header>
+            <p>Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs when a parent class reference is used to refer to a child class object. For example:</p>
+            <pre><code class="code-block">
+            public interface Vegetarian{}
+            public class Animal{}
+            public class Deer extends Animal implements Vegetarian{}
+</code></pre>
+            <p>In this case, the Deer class is considered to be polymorphic since this has multiple inheritance.</p>
+        </section>
+
+        <section id="stack-heap" class="main-section">
+            <header>Stack and Heap</header>
+            <p><b>Heap</b> is where objects live, and <b>Stack</b> is where methods and local varibles live. It is important becasuse if a method has a variable same as the instance variable, it cannot reach the instance variable unless using the keyword <code>this</code>.</p>
+        </section>
+
+        <section id="GUI" class="main-section">
+            <header>GUI</header>
+            <p>One of the big advances that Java made when it was introduced in 1995 was the inclusion of standardized "graphical user interface" ("GUI") libraries.</p>
+            <p>This was a tremendous leap forward over the bewildering array of incompatible third-party libraries that were the only avenues previously open to GUI developers. The Java GUI library was also one of the first major software packages to explicitly describe its architecture in terms of the then-brand-new language of Design Patterns.</p>
+            <p>We will look into the example <i>CHAITANYA SINGH</i> gave out.</p>
+            <pre><code class="code-block">
+            import javax.swing.JButton;
+            import javax.swing.JFrame;
+            import javax.swing.JLabel;
+            import javax.swing.JPanel;
+            import javax.swing.JPasswordField;
+            import javax.swing.JTextField; 
+            public class SwingFirstExample {
+    
+                public static void main(String[] args) {    
+                    // Creating instance of JFrame
+                    JFrame frame = new JFrame("My First Swing Example");
+                    // Setting the width and height of frame
+                    frame.setSize(350, 200);
+                    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+                    /* Creating panel. This is same as a div tag in HTML
+                     * We can create several panels and add them to specific 
+                     * positions in a JFrame. Inside panels we can add text 
+                     * fields, buttons and other components.
+                     */
+                    JPanel panel = new JPanel();    
+                    // adding panel to frame
+                    frame.add(panel);
+                    /* calling user defined method for adding components
+                     * to the panel.
+                     */
+                    placeComponents(panel);
+
+                    // Setting the frame visibility to true
+                    frame.setVisible(true);
+                }
+
+                private static void placeComponents(JPanel panel) {
+
+                    /* We will discuss about layouts in the later sections
+                     * of this tutorial. For now we are setting the layout 
+                     * to null
+                     */
+                    panel.setLayout(null);
+
+                    // Creating JLabel
+                    JLabel userLabel = new JLabel("User");
+                    /* This method specifies the location and size
+                     * of component. setBounds(x, y, width, height)
+                     * here (x,y) are cordinates from the top left 
+                     * corner and remaining two arguments are the width
+                     * and height of the component.
+                     */
+                    userLabel.setBounds(10,20,80,25);
+                    panel.add(userLabel);
+
+                    /* Creating text field where user is supposed to
+                     * enter user name.
+                     */
+                    JTextField userText = new JTextField(20);
+                    userText.setBounds(100,20,165,25);
+                    panel.add(userText);
+
+                    // Same process for password label and text field.
+                    JLabel passwordLabel = new JLabel("Password");
+                    passwordLabel.setBounds(10,50,80,25);
+                    panel.add(passwordLabel);
+
+                    /*This is similar to text field but it hides the user
+                     * entered data and displays dots instead to protect
+                     * the password like we normally see on login screens.
+                     */
+                    JPasswordField passwordText = new JPasswordField(20);
+                    passwordText.setBounds(100,50,165,25);
+                    panel.add(passwordText);
+
+                    // Creating login button
+                    JButton loginButton = new JButton("login");
+                    loginButton.setBounds(10, 80, 80, 25);
+                    panel.add(loginButton);
+                }
+
+            }
+</code></pre>
+        </section>
+
+        <section id="Exception" class="main-section">
+            <header>Exception</header>
+            <p>There are two types of exceptions:</p>
+            <ol>
+                <li>Runtime exceptions (e.g. division by 0)</li>
+                <li>Checked exceptions (e.g. IO Exception)</li>
+            </ol>
+            <p>And we have two ways to handle exceptions:</p>
+            <ol>
+                <li>Try-catch(-finally):</li>
+                <pre><code class="code-block">
+            try {
+                 //statements that may cause an exception
+            }
+            catch (exception(type) e(object))‏ {
+                 //error handling code
+            }
+            </code></pre>
+                <li>Throws: return immediately & thrown to caller</li>
+                <pre><code class="code-block">
+                throw new exception_class("error message");
+                </code></pre>
+            </ol>
+        </section>
+
+        <section id="io-object-serialisation" class="main-section">
+            <header>IO and Object serialisation</header>
+            <p>The java.io package contains nearly every class you might ever need to perform input and output (I/O) in Java. All these streams represent an input source and an output destination. The stream in the java.io package supports many data such as primitives, object, localized characters, etc.</p>
+            <p>A stream can be defined as a sequence of data. There are two kinds of Streams:</p>
+            <ul>
+                <li><b>InPutStream</b>: The InputStream is used to read data from a source.</li>
+                <li><b>OutPutStream</b>: The OutputStream is used for writing data to a destination.</li>
+            </ul>
+            <p>For example, there are fileinputstream, fileoutputstream, ObjectInputStream, OjectOutputStream and more.</p>
+            <p>Serialization is a mechanism to convert an object into stream of bytes so that it can be written into a file, transported through a network or stored into database. De-serialization is just a vice versa. In simple words serialization is converting an object to stream of bytes and de-serialization is rebuilding the object from stream of bytes. Java Serialiation API provides the features to perform seralization & de-serialization. A class must implement <code>java.io.Serializable</code> interface to be eligible for serialization.</p>
+        </section>
+              
+        </section>
+        
+        <section id="reference" class="main-section">
+            <header>Reference</header>
+            <p>This documentation took references from: </p>
+            <ul>
+                <li><a href="https://docs.oracle.com/javase/tutorial/java" target="_blank">https://docs.oracle.com/javase/tutorial/java</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Java_(programming_language)" target="_blank">https://en.wikipedia.org/wiki/Java_(programming_language)</a></li>
+                <li><a href="https://www.tutorialspoint.com/java/index.htm" target="_blank">https://www.tutorialspoint.com/java/index.htm</a></li>
+                <li><a href="https://beginnersbook.com/java-tutorial-for-beginners-with-examples/" target="_blank">https://beginnersbook.com/java-tutorial-for-beginners-with-examples/</a></li>
+                <li><a href="https://www.clear.rice.edu/comp310/JavaResources/GUI/" target="_blank">https://www.clear.rice.edu/comp310/JavaResources/GUI/</a></li>
+            </ul>
+        </section>
+
+    </main>
+    <footer id="footer"></footer>
+</body>
+
+</html>
