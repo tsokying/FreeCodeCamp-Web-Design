@@ -6,8 +6,8 @@ Projects for FreeCodeCamp's Responsive Web Design Certification
 <img src="0-ScreenCap/6.png" width="61.8%">
 https://codepen.io/tsokying/full/WNQpxry
 
-You can also visit my portfolio built by Adobe Portfolio :)
-
+<br/>
+You can also visit my portfolio built by Adobe Portfolio :)<br/>
 https://cameronchanty.myportfolio.com/
 
 ### 1) Tribute Page - Elon Musk
