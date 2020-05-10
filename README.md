@@ -14,7 +14,6 @@ https://codepen.io/tsokying/full/jOPvGoo
 =======
 ### 3) Product Landing Page -Life Reset Button
 <img src="0-ScreenCap/3.png" width="61.8%">
->>>>>>> c15030abdc03e150ca7723a5e74c9563025b686f
 https://codepen.io/tsokying/full/JjYoMwv
 
 ### 4) Technical Documentation - Java
