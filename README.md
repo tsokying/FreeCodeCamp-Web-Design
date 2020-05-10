@@ -2,7 +2,7 @@
 Projects for FreeCodeCamp's Responsive Web Design Certification
 
 ### 5) Personal Portfolio Webpage
-https://codepen.io/tsokying/full/WNQpxry
+https://codepen.io/tsokying/full/WNQpxry<br/>
 <img src="0-ScreenCap/5.png" width="61.8%">
 <img src="0-ScreenCap/6.png" width="61.8%">
 
