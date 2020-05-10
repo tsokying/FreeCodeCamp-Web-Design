@@ -9,10 +9,7 @@ https://codepen.io/tsokying/full/VwwBxrp
 <img src="0-ScreenCap/2.png" width="61.8%">
 https://codepen.io/tsokying/full/jOPvGoo
 
-<<<<<<< HEAD
 ### 3) Product Landing Page - Life Reset Button
-=======
-### 3) Product Landing Page -Life Reset Button
 <img src="0-ScreenCap/3.png" width="61.8%">
 https://codepen.io/tsokying/full/JjYoMwv
 
